@@ -1,6 +1,8 @@
+using System.ComponentModel.DataAnnotations.Schema;
 namespace dna.Models;
 
 public class CovidCase {
-  public long Id { get; set; }
+  [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+  public Guid Id { get; set; }
   public string UserId { get; set; } = string.Empty;
 }
